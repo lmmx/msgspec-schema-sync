@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "content": {
+      "title": "Content",
+      "type": "string"
+    }
+  },
+  "required": [
+    "content"
+  ],
+  "title": "Message",
+  "type": "object"
+}

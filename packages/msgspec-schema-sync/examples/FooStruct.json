@@ -1,0 +1,16 @@
+{
+  "$ref": "#/$defs/FooStruct",
+  "$defs": {
+    "FooStruct": {
+      "title": "FooStruct",
+      "type": "object",
+      "properties": {
+        "foo": {
+          "type": "integer",
+          "default": 1
+        }
+      },
+      "required": []
+    }
+  }
+}

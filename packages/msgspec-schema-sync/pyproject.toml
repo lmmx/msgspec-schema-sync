@@ -1,0 +1,36 @@
+[build-system]
+requires = [
+  "pdm-backend"
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "msgspec-schema-sync"
+version = "0.1.5"
+description = "Synchronise msgspec struct schemas with JSONSchema files"
+authors = [
+  {name = "Louis Maddox", email = "louismmx@gmail.com"}
+]
+dependencies = [
+  "msgspec>=0.9"
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+struct-schema-sync = "msgspec_schema_sync.cli:run_sync"
+
+[project.urls]
+Homepage = "https://github.com/lmmx/msgspec-schema-sync/packages/msgspec-schema-sync"
+Repository = "https://github.com/lmmx/msgspec-schema-sync.git"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+test = [
+  "pytest>=8.3.2"
+]

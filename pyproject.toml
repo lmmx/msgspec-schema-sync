@@ -1,0 +1,42 @@
+[build-system]
+build-backend = "pdm.backend"
+requires = ["pdm-backend"]
+
+[project]
+authors = [
+  {email = "louismmx@gmail.com", name = "Louis Maddox"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python",
+  "Topic :: Software Development :: Libraries"
+]
+dependencies = [
+  "msgspec-schema-sync",
+  "pytest-msgspec-schema-sync"
+]
+description = "Virtual workspace root for the msgspec-schema-sync package and pytest-msgspec-schema-sync plugin"
+license = {text = "MIT"}
+name = "msgspec-schema-sync-workspace"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/lmmx/msgspec-schema-sync"
+Repository = "https://github.com/lmmx/msgspec-schema-sync.git"
+
+[tool.uv.sources]
+msgspec-schema-sync = {workspace = true}
+pytest-msgspec-schema-sync = {workspace = true}
+
+[tool.uv.workspace]
+members = [
+  "packages/msgspec-schema-sync",
+  "packages/pytest-msgspec-schema-sync",
+  "packages/demo-test-package"
+]
