@@ -5,8 +5,8 @@ from pathlib import Path
 from typing import Literal
 
 import msgspec
-from msgspec_schema_sync import sync_schema_from_path as sync
 import pytest
+from msgspec_schema_sync import sync_schema_from_path as sync
 
 from .config import PluginConfig
 from .data_model import SchemaFieldInfo as Info

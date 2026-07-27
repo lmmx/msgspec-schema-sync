@@ -1,15 +1,15 @@
 from __future__ import annotations
 
-from json import dumps, loads
-from importlib import import_module
 from functools import reduce
+from importlib import import_module
+from json import dumps, loads
 from pathlib import Path
 from typing import TypeAlias, TypeVar
 
 import msgspec
 from msgspec import Struct
 
-__all__ = ("import_dotted_path", "write_schema", "sync_schema", "sync_schema_from_path")
+__all__ = ("import_dotted_path", "sync_schema", "sync_schema_from_path", "write_schema")
 
 T = TypeVar("T", bound=Struct)
 ImportString: TypeAlias = str
@@ -24,7 +24,6 @@ def write_schema(struct_schema: dict, schema_path: Path) -> None:
     schema_path.parent.mkdir(exist_ok=True, parents=True)
     schema_json = dumps(struct_schema, indent=2)
     schema_path.write_text(schema_json)
-    return
 
 
 def sync_schema(struct: type[T], schema_path: Path) -> None:
@@ -42,7 +41,6 @@ def sync_schema(struct: type[T], schema_path: Path) -> None:
         previous = loads(schema_path.read_text())
     if not exists or previous != fresh:
         write_schema(struct_schema=fresh, schema_path=schema_path)
-    return
 
 
 def sync_schema_from_path(

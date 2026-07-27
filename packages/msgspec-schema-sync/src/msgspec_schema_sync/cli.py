@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 
-from msgspec import Struct
 import msgspec
+from msgspec import Struct
 
 from .sync import sync_schema
 
