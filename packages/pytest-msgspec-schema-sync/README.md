@@ -25,6 +25,7 @@ Define an Enum class with your msgspec Struct paths, marked with the `msgspec_sc
 from pytest import mark
 from enum import Enum
 
+
 @mark.msgspec_schema_sync
 class ModelSchemas(Enum):
     user = "myapp.Structs.User"
