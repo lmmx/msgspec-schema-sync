@@ -9,7 +9,7 @@ name = "msgspec-schema-sync"
 version = "0.1.5"
 description = "Synchronise msgspec struct schemas with JSONSchema files"
 authors = [
-  {name = "Louis Maddox", email = "louismmx@gmail.com"}
+  { name = "Louis Maddox", email = "louismmx@gmail.com" }
 ]
 dependencies = [
   "msgspec>=0.9"
