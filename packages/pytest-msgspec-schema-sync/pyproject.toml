@@ -9,7 +9,7 @@ name = "pytest-msgspec-schema-sync"
 version = "0.2.1"
 description = "Pytest plugin to synchronise msgspec Struct schemas with JSONSchema files"
 authors = [
-  {name = "Louis Maddox", email = "louismmx@gmail.com"}
+  { name = "Louis Maddox", email = "louismmx@gmail.com" }
 ]
 dependencies = [
   "msgspec-schema-sync>=0.1.5",
