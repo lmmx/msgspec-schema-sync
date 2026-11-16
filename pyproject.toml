@@ -4,7 +4,7 @@ requires = ["pdm-backend"]
 
 [project]
 authors = [
-  {email = "louismmx@gmail.com", name = "Louis Maddox"}
+  { email = "louismmx@gmail.com", name = "Louis Maddox" }
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -20,7 +20,7 @@ dependencies = [
   "pytest-msgspec-schema-sync"
 ]
 description = "Virtual workspace root for the msgspec-schema-sync package and pytest-msgspec-schema-sync plugin"
-license = {text = "MIT"}
+license = { text = "MIT" }
 name = "msgspec-schema-sync-workspace"
 version = "0.1.0"
 readme = "README.md"
@@ -36,8 +36,8 @@ Homepage = "https://github.com/lmmx/msgspec-schema-sync"
 Repository = "https://github.com/lmmx/msgspec-schema-sync.git"
 
 [tool.uv.sources]
-msgspec-schema-sync = {workspace = true}
-pytest-msgspec-schema-sync = {workspace = true}
+msgspec-schema-sync = { workspace = true }
+pytest-msgspec-schema-sync = { workspace = true }
 
 [tool.uv.workspace]
 members = [
